@@ -1,0 +1,26 @@
+#This is a comment I wrote for no reason other than to show that comments can
+#be written in this made up Markup Language I created for the lexer.
+
+--groupings #Operators that define groupings
+( LPAREN
+) RPAREN
+[ LSQBRK #Short for left square bracket
+] RSQBRK #Short for right square bracket
+{ LCURLY
+} RCURLY
+
+--operators #Operators in order of decreasing order of precedence
+#All operators in the same group have the same precendence, and
+#groups that are lower have lower precendence than groups that
+#are higher on the list.
+<begin group>
+^ POW RASSOC
+<end group>
+<begin group>
+* MUL LASSOC
+/ DIV LASSOC
+<end group>
+<begin group>
++ ADD LASSOC
+- SUB LASSOC
+<end group>
