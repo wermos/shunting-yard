@@ -1,6 +1,8 @@
 #This is a comment I wrote for no reason other than to show that comments can
 #be written in this made up Markup Language I created for the lexer.
 
+#Newlines are ignored by the config reader
+
 --groupings #Operators that define groupings
 ( LPAREN
 ) RPAREN
@@ -13,14 +15,17 @@
 #All operators in the same group have the same precendence, and
 #groups that are lower have lower precendence than groups that
 #are higher on the list.
-<begin group>
-^ POW RASSOC
-<end group>
-<begin group>
+
+\begin{group}
+^ POW NASSOC #Meaning it is not associative in general
+\end{group}
+
+\begin{group}
 * MUL LASSOC
-/ DIV LASSOC
-<end group>
-<begin group>
+/ DIV NASSOC
+\end{group}
+
+\begin{group}
 + ADD LASSOC
 - SUB LASSOC
-<end group>
+\end{group}
