@@ -1,11 +1,11 @@
-#include <fstream>
+#include <ifstream>
 #include <string>
 
 struct op {
 	char op_char;
 };
 
-class ConfigReader {
+class config_reader {
 	public:
 		ConfigReader() = default;
 
