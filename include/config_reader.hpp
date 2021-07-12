@@ -14,7 +14,7 @@ class ConfigReader {
 	private:
 		ifstream m_file;
 		bool file_exists(const std::string& file_name) {
-			m_file("../config/config.txt");
-			return f.good();
+			ifstream test_file {"../config/config.txt"};
+			return test_file.good();
 		}
 };
