@@ -17,6 +17,7 @@ class stack<T> {
 			
 		void push(const T& data) {
 			m_data.push_back(data);
+			m_index++;
 		}
 
 	private:
