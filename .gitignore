@@ -1,0 +1,9 @@
+#Generated CMake build files
+build/*
+
+#CMake related paraphernalia
+CMakeFiles/*
+CMakeCache.txt
+
+#Vim temp files
+*.swp
